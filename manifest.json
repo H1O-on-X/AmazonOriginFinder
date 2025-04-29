@@ -1,0 +1,12 @@
+{
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "js": [ "content.js" ],
+      "matches": [ "*://*.amazon.com/dp/*", "*://*.amazon.com/*/dp/*", "*://*.amazon.com/gp/product/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Displays the country of origin prominently on Amazon product pages (near price and buy box) and updates dynamically.",
+   "manifest_version": 3,
+   "name": "Amazon Country of Origin Detector",
+   "version": "4.20"
+}

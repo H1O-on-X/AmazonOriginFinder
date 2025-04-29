@@ -1,0 +1,97 @@
+/**
+ * CSS styles for the Amazon Country of Origin display box.
+ * @version 3.0 (Custom Colors)
+ */
+
+/* Base style for the injected box */
+.origin-box {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  position: relative;
+  outline-width: 3px;
+  outline-style: solid;
+  outline-offset: 2px;
+  outline-color: #888;
+}
+
+/* Style adjustments for the box placed near the price */
+.origin-box.origin-box-price {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: table;
+  width: auto;
+  min-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Made in China - Warning red with red outline */
+.origin-box.origin-china {
+  background-color: #ff1a1a; /* Intense red */
+  color: white;
+  border-color: #cc0000;
+  outline-color: #cc0000;
+}
+
+/* Made in USA - Pure green with green outline */
+.origin-box.origin-usa {
+  background-color: #00b050; /* Vivid green */
+  color: white;
+  border-color: #007a33;
+  outline-color: #007a33;
+}
+
+/* Unknown origin - Neutral gray */
+.origin-box.origin-grey {
+  background-color: #d3d3d3;
+  color: #222;
+  border-color: #999;
+  outline-color: #999;
+}
+
+/* Other origins - Warm yellow with purple outline */
+.origin-box.origin-other {
+  background-color: #f5dc81;
+  color: black;
+  border-color: #f4a261;
+  outline-color: #be2ed6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .origin-box {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .origin-box.origin-box-price {
+    display: block;
+    width: auto;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .origin-box {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+  }
+  .origin-box.origin-box-price {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
